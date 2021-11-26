@@ -1,0 +1,170 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f945e777233a59f4aba40aeca29093a6, type: 3}
+  m_Name: StateMachine
+  m_EditorClassIdentifier: 
+  _serializedGraph: '{"type":"NodeCanvas.StateMachines.FSM","nodes":[{"_actionList":{"executionMode":1,"actions":[]},"_name":"Random
+    Roaming","_position":{"x":581.0,"y":434.0},"_comment":"While the player isn''t
+    in sight of the enemy, it will wander randomly\n","$type":"NodeCanvas.StateMachines.ActionState","$id":"0"},{"_actionList":{"executionMode":1,"actions":[]},"_name":"Chase
+    Enemy","_position":{"x":768.0,"y":594.0},"$type":"NodeCanvas.StateMachines.ActionState","$id":"1"},{"_actionList":{"executionMode":1,"actions":[]},"_name":"Attack
+    Enemy","_position":{"x":596.0,"y":740.0},"$type":"NodeCanvas.StateMachines.ActionState","$id":"2"}],"connections":[{"_condition":{"valueA":{"_name":"EnemyInSight","_targetVariableID":"280e9ea7-413f-4e17-8709-d6b98fe04007"},"valueB":{"_value":true},"$type":"NodeCanvas.Tasks.Conditions.CheckBoolean"},"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"valueA":{"_name":"EnemyInSight","_targetVariableID":"280e9ea7-413f-4e17-8709-d6b98fe04007"},"valueB":{},"$type":"NodeCanvas.Tasks.Conditions.CheckBoolean"},"_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"0"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"valueA":{"_name":"EnemyInAttackDistance","_targetVariableID":"2746cecc-6e97-48f2-98e4-3976e772732d"},"valueB":{"_value":true},"$type":"NodeCanvas.Tasks.Conditions.CheckBoolean"},"_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"2"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"valueA":{"_name":"EnemyInAttackDistance","_targetVariableID":"2746cecc-6e97-48f2-98e4-3976e772732d"},"valueB":{},"$type":"NodeCanvas.Tasks.Conditions.CheckBoolean"},"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.StateMachines.FSMConnection"}],"canvasGroups":[],"localBlackboard":{"_variables":{"EnemyInSight":{"_name":"EnemyInSight","_id":"280e9ea7-413f-4e17-8709-d6b98fe04007","$type":"NodeCanvas.Framework.Variable`1[[System.Boolean,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"EnemyInAttackDistance":{"_name":"EnemyInAttackDistance","_id":"2746cecc-6e97-48f2-98e4-3976e772732d","$type":"NodeCanvas.Framework.Variable`1[[System.Boolean,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}}}}'
+  _objectReferences: []
+  _graphSource:
+    _version: 3.05
+    _category: 
+    _comments: 
+    _translation: {x: 0, y: 0}
+    _zoomFactor: 1
+  _haltSerialization: 0
+#---GRAPH_START---
+#The pretty formatted json serialization bellow is only a reference to help in version control diff. Other than that it is not used at all.
+#{
+#    "type": "NodeCanvas.StateMachines.FSM",
+#    "nodes": [
+#        {
+#            "_actionList": {
+#                "executionMode": 1,
+#                "actions": []
+#            },
+#            "_name": "Random Roaming",
+#            "_position": {
+#                "x": 581.0,
+#                "y": 434.0
+#            },
+#            "_comment": "While the player isn't in sight of the enemy, it will wander randomly\n",
+#            "$type": "NodeCanvas.StateMachines.ActionState",
+#            "$id": "0"
+#        },
+#        {
+#            "_actionList": {
+#                "executionMode": 1,
+#                "actions": []
+#            },
+#            "_name": "Chase Enemy",
+#            "_position": {
+#                "x": 768.0,
+#                "y": 594.0
+#            },
+#            "$type": "NodeCanvas.StateMachines.ActionState",
+#            "$id": "1"
+#        },
+#        {
+#            "_actionList": {
+#                "executionMode": 1,
+#                "actions": []
+#            },
+#            "_name": "Attack Enemy",
+#            "_position": {
+#                "x": 596.0,
+#                "y": 740.0
+#            },
+#            "$type": "NodeCanvas.StateMachines.ActionState",
+#            "$id": "2"
+#        }
+#    ],
+#    "connections": [
+#        {
+#            "_condition": {
+#                "valueA": {
+#                    "_name": "EnemyInSight",
+#                    "_targetVariableID": "280e9ea7-413f-4e17-8709-d6b98fe04007"
+#                },
+#                "valueB": {
+#                    "_value": true
+#                },
+#                "$type": "NodeCanvas.Tasks.Conditions.CheckBoolean"
+#            },
+#            "_sourceNode": {
+#                "$ref": "0"
+#            },
+#            "_targetNode": {
+#                "$ref": "1"
+#            },
+#            "$type": "NodeCanvas.StateMachines.FSMConnection"
+#        },
+#        {
+#            "_condition": {
+#                "valueA": {
+#                    "_name": "EnemyInSight",
+#                    "_targetVariableID": "280e9ea7-413f-4e17-8709-d6b98fe04007"
+#                },
+#                "valueB": {
+#
+#                },
+#                "$type": "NodeCanvas.Tasks.Conditions.CheckBoolean"
+#            },
+#            "_sourceNode": {
+#                "$ref": "1"
+#            },
+#            "_targetNode": {
+#                "$ref": "0"
+#            },
+#            "$type": "NodeCanvas.StateMachines.FSMConnection"
+#        },
+#        {
+#            "_condition": {
+#                "valueA": {
+#                    "_name": "EnemyInAttackDistance",
+#                    "_targetVariableID": "2746cecc-6e97-48f2-98e4-3976e772732d"
+#                },
+#                "valueB": {
+#                    "_value": true
+#                },
+#                "$type": "NodeCanvas.Tasks.Conditions.CheckBoolean"
+#            },
+#            "_sourceNode": {
+#                "$ref": "1"
+#            },
+#            "_targetNode": {
+#                "$ref": "2"
+#            },
+#            "$type": "NodeCanvas.StateMachines.FSMConnection"
+#        },
+#        {
+#            "_condition": {
+#                "valueA": {
+#                    "_name": "EnemyInAttackDistance",
+#                    "_targetVariableID": "2746cecc-6e97-48f2-98e4-3976e772732d"
+#                },
+#                "valueB": {
+#
+#                },
+#                "$type": "NodeCanvas.Tasks.Conditions.CheckBoolean"
+#            },
+#            "_sourceNode": {
+#                "$ref": "2"
+#            },
+#            "_targetNode": {
+#                "$ref": "1"
+#            },
+#            "$type": "NodeCanvas.StateMachines.FSMConnection"
+#        }
+#    ],
+#    "canvasGroups": [],
+#    "localBlackboard": {
+#        "_variables": {
+#            "EnemyInSight": {
+#                "_name": "EnemyInSight",
+#                "_id": "280e9ea7-413f-4e17-8709-d6b98fe04007",
+#                "$type": "NodeCanvas.Framework.Variable`1[[System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"
+#            },
+#            "EnemyInAttackDistance": {
+#                "_name": "EnemyInAttackDistance",
+#                "_id": "2746cecc-6e97-48f2-98e4-3976e772732d",
+#                "$type": "NodeCanvas.Framework.Variable`1[[System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"
+#            }
+#        }
+#    }
+#}
+#---GRAPH_END---
